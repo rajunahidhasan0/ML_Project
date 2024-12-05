@@ -1,4 +1,6 @@
 # Build and Release Folders
+/CourseProjectDataSet2
+/CourseProjectDataSet2.zip
 bin-debug/
 bin-release/
 [Oo]bj/
