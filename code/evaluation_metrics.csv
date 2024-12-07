@@ -1,1 +1,5 @@
-""
+,Model,Accuracy,Precision,Recall,F1 Score,k-fold score,stratified score,Source
+0,Artificial Neural Net Model,0.47,0.46,0.47,0.46,0.12564432989690721,0.12607388316151202,Unknown
+1,Artificial Neural Net Model,0.51,0.51,0.51,0.5,0.23132643843928147,0.22823997788138023,Unknown
+2,Artificial Neural Net Model,0.57,0.56,0.57,0.56,0.27679954407464186,0.2940149087476337,Unknown
+3,Artificial Neural Net Model,0.52,0.51,0.52,0.51,0.22672320461927103,0.24106820642367377,Unknown
