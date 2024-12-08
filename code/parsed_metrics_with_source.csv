@@ -612,6 +612,156 @@ Mean Straified cross-validation score: 0.6948765224361211
 evaluate_model.xg_boost_classifier_model()","-------------------- #8. XG Boost Classifier Model --------------------#
 
 #---------- Grid Search ------------#
+
+Best parameters:  {'gamma': 0.1, 'learning_rate': 0.2, 'n_estimators': 50, 'subsample': 1.0}
+
+Best score:  0.6206896551724138
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'subsample': 1.0, 'n_estimators': 50, 'learning_rate': 0.2, 'gamma': 0.1}
+
+Best score:  0.6206896551724138
+
+
+
+XG Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.73      0.82      0.77      2021
+
+           1       0.84      0.87      0.85      2114
+
+           2       0.60      0.72      0.66      2278
+
+           3       0.62      0.70      0.66      2224
+
+           4       0.63      0.67      0.65      2270
+
+           5       0.41      0.58      0.48      1974
+
+           6       0.42      0.30      0.35      2084
+
+           7       0.47      0.52      0.49      2222
+
+           8       0.74      0.85      0.79      1650
+
+           9       0.91      0.88      0.90      1698
+
+          10       0.71      0.81      0.76      1996
+
+          11       0.63      0.47      0.54      2172
+
+          12       0.63      0.37      0.46      2137
+
+          13       0.56      0.48      0.51      1788
+
+          14       0.53      0.40      0.46      1650
+
+
+
+    accuracy                           0.63     30278
+
+   macro avg       0.63      0.63      0.62     30278
+
+weighted avg       0.63      0.63      0.62     30278
+
+
+
+
+
+K-fold cross-validation scores: [0.67889981 0.67382689 0.68481966]
+
+Mean K-fold cross-validation score: 0.6791821184648894
+
+
+
+Straified cross validation scores: [0.68238744 0.67366836 0.68085612]
+
+Mean Straified cross-validation score: 0.6789706419394331
+"
+"# 10. Artificial Neural Network on W100_O25_Features
+
+evaluate_model.ann_model()","#----------------------- #10. Artificial Neural Net Model ------------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'batch_size': 50, 'epochs': 150, 'model__activation': 'tanh', 'model__n_neurons': 16}
+
+Best score:  0.4908178094860616
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'model__n_neurons': 16, 'model__activation': 'tanh', 'epochs': 150, 'batch_size': 50}
+
+Best score:  0.4898929845422117
+
+
+
+Artificial Neural Net Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.61      0.69      0.65      2021
+
+           1       0.72      0.78      0.75      2114
+
+           2       0.45      0.55      0.49      2278
+
+           3       0.46      0.63      0.53      2224
+
+           4       0.55      0.59      0.57      2270
+
+           5       0.37      0.44      0.41      1974
+
+           6       0.22      0.17      0.19      2084
+
+           7       0.35      0.37      0.36      2222
+
+           8       0.74      0.74      0.74      1650
+
+           9       0.86      0.83      0.85      1698
+
+          10       0.67      0.76      0.71      1996
+
+          11       0.39      0.35      0.37      2172
+
+          12       0.40      0.19      0.26      2137
+
+          13       0.40      0.37      0.39      1788
+
+          14       0.41      0.22      0.28      1650
+
+
+
+    accuracy                           0.51     30278
+
+   macro avg       0.51      0.51      0.50     30278
+
+weighted avg       0.50      0.51      0.50     30278
+
+
+
+
+
+K-fold cross-validation scores: [0.25110970196575777, 0.2665539290810125]
+
+Average score: 0.25883181552338513
+
+
+
+Stratified cross-validation scores: [0.2608856478545762, 0.24118797230883052]
+
+Average score: 0.25103681008170337
 "
 "# 1. Logistic Regression on W100_O50_Features
 
@@ -764,6 +914,84 @@ Straified cross validation scores: [0.66555066 0.66214311 0.66372929 0.65068735 
  0.66284808 0.66249559 0.66214311 0.65385971]
 
 Mean Straified cross-validation score: 0.6604042024909977
+"
+"# 3. Random Forest Classifier on W100_O50_Features
+
+evaluate_model.random_forest_classifier_model()","#-------------------- #3. Random Forest Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 20, 'n_estimators': 100}
+
+Best score:  0.6326227313513809
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 100, 'max_depth': 20, 'criterion': 'entropy', 'bootstrap': True}
+
+Best score:  0.6313890259983256
+
+
+
+Random Forest Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.79      0.83      0.81      3031
+
+           1       0.85      0.90      0.88      3168
+
+           2       0.67      0.76      0.71      3416
+
+           3       0.71      0.72      0.72      3333
+
+           4       0.60      0.71      0.65      3404
+
+           5       0.43      0.60      0.50      2958
+
+           6       0.50      0.34      0.41      3123
+
+           7       0.51      0.60      0.55      3334
+
+           8       0.71      0.85      0.78      2473
+
+           9       0.92      0.89      0.91      2536
+
+          10       0.70      0.82      0.75      2993
+
+          11       0.68      0.53      0.60      3257
+
+          12       0.70      0.44      0.54      3213
+
+          13       0.67      0.51      0.58      2681
+
+          14       0.61      0.45      0.52      2473
+
+
+
+    accuracy                           0.66     45393
+
+   macro avg       0.67      0.66      0.66     45393
+
+weighted avg       0.67      0.66      0.66     45393
+
+
+
+
+
+K-fold cross-validation scores: [0.74035106 0.74098551 0.74673505]
+
+Mean K-fold cross-validation score: 0.7426905420156139
+
+
+
+Straified cross validation scores: [0.74156709 0.74458073 0.743827  ]
+
+Mean Straified cross-validation score: 0.7433249414366307
 "
 "# 4. Gaussian Naive Bayes on W100_O50_Features
 
@@ -1093,11 +1321,1799 @@ Straified cross validation scores: [0.31577093 0.30260839 0.29379626 0.33239337 
 
 Mean Straified cross-validation score: 0.3127896409777034
 "
+"# 8. Gradient Boost on W100_O50_Features
+
+evaluate_model.gradient_boost_model()","#-------------------- #9. Gradient Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'random_state': 42}
+
+Best score:  0.5990479968765609
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'random_state': 42, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+Best score:  0.5990479968765609
+
+
+
+Gradient Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.75      0.78      0.77      3031
+
+           1       0.81      0.88      0.85      3168
+
+           2       0.61      0.72      0.66      3416
+
+           3       0.64      0.68      0.66      3333
+
+           4       0.61      0.68      0.64      3404
+
+           5       0.43      0.54      0.48      2958
+
+           6       0.41      0.31      0.35      3123
+
+           7       0.47      0.54      0.50      3334
+
+           8       0.75      0.83      0.79      2473
+
+           9       0.91      0.88      0.89      2536
+
+          10       0.72      0.79      0.76      2993
+
+          11       0.63      0.46      0.53      3257
+
+          12       0.59      0.41      0.48      3213
+
+          13       0.56      0.49      0.53      2681
+
+          14       0.51      0.43      0.46      2473
+
+
+
+    accuracy                           0.63     45393
+
+   macro avg       0.63      0.63      0.62     45393
+
+weighted avg       0.62      0.63      0.62     45393
+
+
+
+
+
+K-fold cross-validation scores: [0.67473829 0.66585598 0.67287051]
+
+Mean K-fold cross-validation score: 0.6711549270472021
+
+
+
+Straified cross validation scores: [0.67156604 0.67024426 0.66953947]
+
+Mean Straified cross-validation score: 0.6704499231516373
+"
 "# 9. XGBoost Classifier on W100_O50_Features
 
 evaluate_model.xg_boost_classifier_model()","-------------------- #8. XG Boost Classifier Model --------------------#
 
 #---------- Grid Search ------------#
+
+Best parameters:  {'gamma': 0, 'learning_rate': 0.2, 'n_estimators': 50, 'subsample': 0.8}
+
+Best score:  0.636147340852755
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'subsample': 0.8, 'n_estimators': 50, 'learning_rate': 0.2, 'gamma': 0}
+
+Best score:  0.636147340852755
+
+
+
+XG Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.80      0.82      0.81      3031
+
+           1       0.84      0.90      0.87      3168
+
+           2       0.64      0.74      0.68      3416
+
+           3       0.68      0.72      0.70      3333
+
+           4       0.64      0.71      0.67      3404
+
+           5       0.46      0.60      0.52      2958
+
+           6       0.47      0.34      0.39      3123
+
+           7       0.48      0.57      0.52      3334
+
+           8       0.76      0.86      0.81      2473
+
+           9       0.93      0.90      0.91      2536
+
+          10       0.75      0.82      0.79      2993
+
+          11       0.68      0.52      0.59      3257
+
+          12       0.68      0.46      0.54      3213
+
+          13       0.61      0.52      0.57      2681
+
+          14       0.56      0.48      0.52      2473
+
+
+
+    accuracy                           0.66     45393
+
+   macro avg       0.67      0.66      0.66     45393
+
+weighted avg       0.66      0.66      0.66     45393
+
+
+
+
+
+K-fold cross-validation scores: [0.70164957 0.70127948 0.70015333]
+
+Mean K-fold cross-validation score: 0.7010274603174665
+
+
+
+Straified cross validation scores: [0.6974199  0.70339431 0.69634643]
+
+Mean Straified cross-validation score: 0.6990535466925448
+"
+"# 10. Artificial Neural Network on W100_O50_Features
+
+evaluate_model.ann_model()","#----------------------- #10. Artificial Neural Net Model ------------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'batch_size': 50, 'epochs': 150, 'model__activation': 'tanh', 'model__n_neurons': 16}
+
+Best score:  0.5115437059452934
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'model__n_neurons': 16, 'model__activation': 'tanh', 'epochs': 150, 'batch_size': 50}
+
+Best score:  0.5071371694060829
+
+
+
+Artificial Neural Net Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.58      0.71      0.64      3031
+
+           1       0.76      0.78      0.77      3168
+
+           2       0.46      0.70      0.56      3416
+
+           3       0.50      0.59      0.54      3333
+
+           4       0.61      0.60      0.61      3404
+
+           5       0.38      0.47      0.42      2958
+
+           6       0.28      0.12      0.16      3123
+
+           7       0.36      0.48      0.42      3334
+
+           8       0.73      0.81      0.77      2473
+
+           9       0.87      0.85      0.86      2536
+
+          10       0.70      0.74      0.72      2993
+
+          11       0.44      0.40      0.42      3257
+
+          12       0.41      0.19      0.26      3213
+
+          13       0.42      0.34      0.38      2681
+
+          14       0.37      0.25      0.30      2473
+
+
+
+    accuracy                           0.53     45393
+
+   macro avg       0.53      0.53      0.52     45393
+
+weighted avg       0.52      0.53      0.52     45393
+
+
+
+
+
+K-fold cross-validation scores: [0.2758098057876, 0.2755375396545647]
+
+Average score: 0.27567367272108234
+
+
+
+Stratified cross-validation scores: [0.2708046949349688, 0.2598519562918576]
+
+Average score: 0.2653283256134132
+"
+"# 1. Logistic Regression on W200_O25_Features
+
+evaluate_model.logistic_regression_model()","#------------------- #1. Logistic Regression Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs'}
+
+Best score:  0.37927131118202295
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'solver': 'lbfgs', 'penalty': 'l2', 'max_iter': 500, 'C': 10}
+
+Best score:  0.37927131118202295
+
+
+
+Logistic Regression Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.27      0.41      0.33      1008
+
+           1       0.39      0.57      0.46      1053
+
+           2       0.27      0.34      0.30      1135
+
+           3       0.25      0.57      0.35      1108
+
+           4       0.36      0.34      0.35      1135
+
+           5       0.42      0.43      0.43       986
+
+           6       0.35      0.22      0.27      1038
+
+           7       0.23      0.13      0.17      1109
+
+           8       0.64      0.77      0.70       822
+
+           9       0.84      0.80      0.82       862
+
+          10       0.70      0.72      0.71       998
+
+          11       0.30      0.23      0.26      1075
+
+          12       0.31      0.06      0.09      1050
+
+          13       0.34      0.18      0.23       892
+
+          14       0.28      0.12      0.17       823
+
+
+
+    accuracy                           0.39     15094
+
+   macro avg       0.40      0.39      0.38     15094
+
+weighted avg       0.39      0.39      0.37     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.18397201 0.17936079 0.1898553 ]
+
+Mean K-fold cross-validation score: 0.18439603540573488
+
+
+
+Straified cross validation scores: [0.17920178 0.19096836 0.18317698]
+
+Mean Straified cross-validation score: 0.18444903800286214
+"
+"# 2. Decision Tree Classifier on W200_O25_Features
+
+evaluate_model.decission_tree_classifier_model()","#-------------------- #2. Decission Tree Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'criterion': 'gini', 'max_depth': 50, 'min_samples_split': 2}
+
+Best score:  0.46805699423978236
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'min_samples_split': 2, 'max_depth': 50, 'criterion': 'gini'}
+
+Best score:  0.4691185640223967
+
+
+
+Decission Tree Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.70      0.65      0.67      1008
+
+           1       0.74      0.75      0.75      1053
+
+           2       0.55      0.54      0.55      1135
+
+           3       0.58      0.56      0.57      1108
+
+           4       0.48      0.48      0.48      1135
+
+           5       0.36      0.33      0.34       986
+
+           6       0.24      0.25      0.25      1038
+
+           7       0.40      0.41      0.41      1109
+
+           8       0.65      0.65      0.65       822
+
+           9       0.87      0.83      0.85       862
+
+          10       0.66      0.68      0.67       998
+
+          11       0.38      0.38      0.38      1075
+
+          12       0.32      0.30      0.31      1050
+
+          13       0.41      0.39      0.40       892
+
+          14       0.32      0.39      0.35       823
+
+
+
+    accuracy                           0.50     15094
+
+   macro avg       0.51      0.51      0.51     15094
+
+weighted avg       0.51      0.50      0.50     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.5795834  0.59294005 0.56765782]
+
+Mean K-fold cross-validation score: 0.5800604229607251
+
+
+
+Straified cross validation scores: [0.58467165 0.5775163  0.57624424]
+
+Mean Straified cross-validation score: 0.5794773943923252
+"
+"# 3. Random Forest Classifier on W200_O25_Features
+
+evaluate_model.random_forest_classifier_model()","#-------------------- #3. Random Forest Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'bootstrap': True, 'criterion': 'gini', 'max_depth': 20, 'n_estimators': 100}
+
+Best score:  0.5809664079353817
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 100, 'max_depth': 20, 'criterion': 'gini', 'bootstrap': True}
+
+Best score:  0.5812273736603374
+
+
+
+Random Forest Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.74      0.80      0.77      1008
+
+           1       0.84      0.87      0.85      1053
+
+           2       0.59      0.71      0.64      1135
+
+           3       0.63      0.67      0.65      1108
+
+           4       0.53      0.69      0.60      1135
+
+           5       0.43      0.61      0.51       986
+
+           6       0.45      0.34      0.39      1038
+
+           7       0.46      0.51      0.48      1109
+
+           8       0.74      0.82      0.78       822
+
+           9       0.88      0.90      0.89       862
+
+          10       0.67      0.83      0.74       998
+
+          11       0.60      0.39      0.47      1075
+
+          12       0.59      0.31      0.41      1050
+
+          13       0.61      0.45      0.51       892
+
+          14       0.55      0.39      0.46       823
+
+
+
+    accuracy                           0.62     15094
+
+   macro avg       0.62      0.62      0.61     15094
+
+weighted avg       0.62      0.62      0.61     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.6959771  0.70758467 0.68866274]
+
+Mean K-fold cross-validation score: 0.697408173000477
+
+
+
+Straified cross validation scores: [0.69343298 0.69470504 0.70106535]
+
+Mean Straified cross-validation score: 0.696401123655059
+"
+"# 4. Gaussian Naive Bayes on W200_O25_Features
+
+evaluate_model.gaussian_naive_bias_classifier_model()","#-------------------- #4. Gaussian Naive Bias Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'var_smoothing': 1e-09}
+
+Best score:  0.23455780643763235
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'var_smoothing': 1e-09}
+
+Best score:  0.23455780643763235
+
+
+
+Gaussian Naive Bias Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.12      0.86      0.21      1008
+
+           1       0.16      0.06      0.09      1053
+
+           2       0.15      0.10      0.12      1135
+
+           3       0.13      0.05      0.07      1108
+
+           4       0.22      0.12      0.15      1135
+
+           5       0.33      0.21      0.26       986
+
+           6       0.23      0.15      0.18      1038
+
+           7       0.11      0.07      0.09      1109
+
+           8       0.55      0.61      0.58       822
+
+           9       0.83      0.75      0.79       862
+
+          10       0.46      0.61      0.53       998
+
+          11       0.41      0.03      0.05      1075
+
+          12       0.14      0.00      0.01      1050
+
+          13       0.24      0.04      0.07       892
+
+          14       0.12      0.06      0.08       823
+
+
+
+    accuracy                           0.24     15094
+
+   macro avg       0.28      0.25      0.22     15094
+
+weighted avg       0.27      0.24      0.21     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.24359994 0.2490062  0.224519  ]
+
+Mean K-fold cross-validation score: 0.23904171304393915
+
+
+
+Straified cross validation scores: [0.24534902 0.23390046 0.2305613 ]
+
+Mean Straified cross-validation score: 0.2366035935760852
+"
+"# 5. Support Vector Classifier on W200_O25_Features
+
+evaluate_model.support_vector_classifier_model()","#-------------------- #5. Support Vector Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 1000, 'gamma': 0.1, 'kernel': 'rbf'}
+
+Best score:  0.548103065862437
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'kernel': 'rbf', 'gamma': 0.1, 'C': 1000}
+
+Best score:  0.548103065862437
+
+
+
+Support Vector Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.77      0.80      0.78      1008
+
+           1       0.83      0.84      0.84      1053
+
+           2       0.59      0.67      0.63      1135
+
+           3       0.60      0.67      0.63      1108
+
+           4       0.59      0.59      0.59      1135
+
+           5       0.38      0.50      0.43       986
+
+           6       0.41      0.34      0.37      1038
+
+           7       0.45      0.46      0.46      1109
+
+           8       0.71      0.79      0.75       822
+
+           9       0.88      0.84      0.86       862
+
+          10       0.59      0.80      0.68       998
+
+          11       0.47      0.40      0.43      1075
+
+          12       0.39      0.28      0.33      1050
+
+          13       0.56      0.44      0.49       892
+
+          14       0.43      0.31      0.36       823
+
+
+
+    accuracy                           0.58     15094
+
+   macro avg       0.58      0.58      0.58     15094
+
+weighted avg       0.57      0.58      0.57     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.11369057 0.1143266  0.11925584]
+
+Mean K-fold cross-validation score: 0.11575767212593417
+
+
+
+Straified cross validation scores: [0.11448561 0.12005088 0.11814279]
+
+Mean Straified cross-validation score: 0.117559760428261
+"
+"# 6. K-Nearest Neighbors on W200_O25_Features
+
+evaluate_model.knn_classifier_model()","#-------------------- #6. K-Nearest Neighbors Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'metric': 'minkowski', 'n_neighbors': 100, 'p': 1, 'weights': 'distance'}
+
+Best score:  0.45613035469837376
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'weights': 'distance', 'p': 1, 'n_neighbors': 100, 'metric': 'minkowski'}
+
+Best score:  0.45613035469837376
+
+
+
+K-Nearest Neighbors Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.58      0.76      0.65      1008
+
+           1       0.61      0.73      0.66      1053
+
+           2       0.38      0.61      0.47      1135
+
+           3       0.46      0.63      0.53      1108
+
+           4       0.48      0.40      0.44      1135
+
+           5       0.36      0.41      0.38       986
+
+           6       0.42      0.22      0.29      1038
+
+           7       0.31      0.42      0.36      1109
+
+           8       0.49      0.82      0.61       822
+
+           9       0.90      0.75      0.82       862
+
+          10       0.54      0.71      0.61       998
+
+          11       0.58      0.33      0.42      1075
+
+          12       0.67      0.28      0.39      1050
+
+          13       0.57      0.23      0.33       892
+
+          14       0.42      0.12      0.19       823
+
+
+
+    accuracy                           0.49     15094
+
+   macro avg       0.52      0.49      0.48     15094
+
+weighted avg       0.51      0.49      0.47     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.33598346 0.34107171 0.33232628]
+
+Mean K-fold cross-validation score: 0.3364604865638416
+
+
+
+Straified cross validation scores: [0.34425187 0.34234377 0.33614247]
+
+Mean Straified cross-validation score: 0.3409127047225314
+"
+"# 7. AdaBoost Classifier on W200_O25_Features
+
+evaluate_model.ada_boost_classifier_model()","#-------------------- #7. Ada-Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'estimator': DecisionTreeClassifier(max_depth=1), 'learning_rate': 0.5, 'n_estimators': 50}
+
+Best score:  0.2274027502161715
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 50, 'learning_rate': 0.5, 'estimator': DecisionTreeClassifier(max_depth=1)}
+
+Best score:  0.2274027502161715
+
+
+
+Ada-Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.29      0.11      0.16      1008
+
+           1       0.30      0.40      0.34      1053
+
+           2       0.14      0.35      0.20      1135
+
+           3       0.17      0.18      0.18      1108
+
+           4       0.19      0.35      0.25      1135
+
+           5       0.31      0.59      0.40       986
+
+           6       0.16      0.07      0.10      1038
+
+           7       0.13      0.07      0.09      1109
+
+           8       0.23      0.12      0.15       822
+
+           9       0.52      0.25      0.34       862
+
+          10       0.28      0.54      0.37       998
+
+          11       0.19      0.10      0.13      1075
+
+          12       0.43      0.25      0.32      1050
+
+          13       0.10      0.03      0.05       892
+
+          14       0.10      0.02      0.04       823
+
+
+
+    accuracy                           0.23     15094
+
+   macro avg       0.24      0.23      0.21     15094
+
+weighted avg       0.23      0.23      0.21     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.26713309 0.25441247 0.25647957]
+
+Mean K-fold cross-validation score: 0.25934170774367943
+
+
+
+Straified cross validation scores: [0.23898871 0.27412943 0.24725712]
+
+Mean Straified cross-validation score: 0.2534584194625537
+"
+"# 8. Gradient Boost on W200_O25_Features
+
+evaluate_model.gradient_boost_model()","#-------------------- #9. Gradient Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'random_state': 42}
+
+Best score:  0.5616163685797267
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'random_state': 42, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+Best score:  0.5616163685797267
+
+
+
+Gradient Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.71      0.75      0.73      1008
+
+           1       0.84      0.84      0.84      1053
+
+           2       0.60      0.63      0.62      1135
+
+           3       0.59      0.65      0.62      1108
+
+           4       0.60      0.62      0.61      1135
+
+           5       0.44      0.56      0.50       986
+
+           6       0.37      0.36      0.36      1038
+
+           7       0.45      0.49      0.47      1109
+
+           8       0.74      0.83      0.78       822
+
+           9       0.90      0.88      0.89       862
+
+          10       0.70      0.78      0.74       998
+
+          11       0.51      0.40      0.45      1075
+
+          12       0.45      0.32      0.37      1050
+
+          13       0.51      0.45      0.48       892
+
+          14       0.47      0.39      0.43       823
+
+
+
+    accuracy                           0.59     15094
+
+   macro avg       0.59      0.60      0.59     15094
+
+weighted avg       0.59      0.59      0.59     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.65876928 0.66910479 0.64652568]
+
+Mean K-fold cross-validation score: 0.6581332485291779
+
+
+
+Straified cross validation scores: [0.66226745 0.66020035 0.66481158]
+
+Mean Straified cross-validation score: 0.6624264588964859
+"
+"# 9. XGBoost Classifier on W200_O25_Features
+
+evaluate_model.xg_boost_classifier_model()","-------------------- #8. XG Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'gamma': 0.1, 'learning_rate': 0.2, 'n_estimators': 50, 'subsample': 0.8}
+
+Best score:  0.5928928366805666
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'subsample': 0.8, 'n_estimators': 50, 'learning_rate': 0.2, 'gamma': 0.1}
+
+Best score:  0.5928928366805666
+
+
+
+XG Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.76      0.78      0.77      1008
+
+           1       0.84      0.87      0.85      1053
+
+           2       0.63      0.68      0.66      1135
+
+           3       0.65      0.68      0.66      1108
+
+           4       0.65      0.66      0.65      1135
+
+           5       0.47      0.63      0.54       986
+
+           6       0.44      0.37      0.40      1038
+
+           7       0.45      0.53      0.49      1109
+
+           8       0.78      0.83      0.80       822
+
+           9       0.91      0.90      0.91       862
+
+          10       0.71      0.83      0.77       998
+
+          11       0.54      0.44      0.48      1075
+
+          12       0.50      0.33      0.40      1050
+
+          13       0.59      0.48      0.53       892
+
+          14       0.48      0.42      0.45       823
+
+
+
+    accuracy                           0.63     15094
+
+   macro avg       0.63      0.63      0.62     15094
+
+weighted avg       0.62      0.63      0.62     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.69041183 0.70345047 0.69025282]
+
+Mean K-fold cross-validation score: 0.6947050405469869
+
+
+
+Straified cross validation scores: [0.68929878 0.69677214 0.70154238]
+
+Mean Straified cross-validation score: 0.6958710976837864
+"
+"# 10. Artificial Neural Network on W200_O25_Features
+
+evaluate_model.ann_model()","#----------------------- #10. Artificial Neural Net Model ------------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'batch_size': 50, 'epochs': 150, 'model__activation': 'tanh', 'model__n_neurons': 16}
+
+Best score:  0.4648817707220066
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'model__n_neurons': 16, 'model__activation': 'tanh', 'epochs': 150, 'batch_size': 50}
+
+Best score:  0.4709674577005758
+
+
+
+Artificial Neural Net Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.49      0.71      0.58      1008
+
+           1       0.65      0.63      0.64      1053
+
+           2       0.45      0.52      0.48      1135
+
+           3       0.49      0.58      0.53      1108
+
+           4       0.57      0.58      0.58      1135
+
+           5       0.42      0.46      0.44       986
+
+           6       0.26      0.23      0.24      1038
+
+           7       0.37      0.35      0.36      1109
+
+           8       0.71      0.77      0.74       822
+
+           9       0.89      0.84      0.87       862
+
+          10       0.69      0.76      0.72       998
+
+          11       0.30      0.26      0.28      1075
+
+          12       0.30      0.21      0.25      1050
+
+          13       0.41      0.35      0.38       892
+
+          14       0.28      0.19      0.23       823
+
+
+
+    accuracy                           0.49     15094
+
+   macro avg       0.49      0.50      0.49     15094
+
+weighted avg       0.48      0.49      0.48     15094
+
+
+
+
+
+K-fold cross-validation scores: [0.22779308882764468, 0.22813526979751936]
+
+Average score: 0.227964179312582
+
+
+
+Stratified cross-validation scores: [0.23934704261182954, 0.22898335630234284]
+
+Average score: 0.2341651994570862
+"
+"# 1. Logistic Regression on W200_O50_Features
+
+evaluate_model.logistic_regression_model()","#------------------- #1. Logistic Regression Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
+
+Best score:  0.3752855166069051
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'solver': 'lbfgs', 'penalty': 'l2', 'max_iter': 100, 'C': 10}
+
+Best score:  0.3752855166069051
+
+
+
+Logistic Regression Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.27      0.41      0.33      1507
+
+           1       0.40      0.59      0.48      1574
+
+           2       0.27      0.31      0.29      1698
+
+           3       0.27      0.58      0.37      1656
+
+           4       0.35      0.32      0.33      1693
+
+           5       0.39      0.43      0.41      1474
+
+           6       0.38      0.20      0.27      1554
+
+           7       0.21      0.20      0.21      1657
+
+           8       0.65      0.77      0.70      1229
+
+           9       0.87      0.78      0.83      1294
+
+          10       0.69      0.75      0.72      1493
+
+          11       0.33      0.24      0.28      1597
+
+          12       0.28      0.06      0.10      1578
+
+          13       0.33      0.21      0.26      1332
+
+          14       0.28      0.06      0.10      1228
+
+
+
+    accuracy                           0.39     22564
+
+   macro avg       0.40      0.39      0.38     22564
+
+weighted avg       0.39      0.39      0.37     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.17241013 0.17506913 0.18072545]
+
+Mean K-fold cross-validation score: 0.17606823815694317
+
+
+
+Straified cross validation scores: [0.17836631 0.17251649 0.17508776]
+
+Mean Straified cross-validation score: 0.1753235158390634
+"
+"# 2. Decision Tree Classifier on W200_O50_Features
+
+evaluate_model.decission_tree_classifier_model()","#-------------------- #2. Decission Tree Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'criterion': 'entropy', 'max_depth': 50, 'min_samples_split': 2}
+
+Best score:  0.509308180724754
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'min_samples_split': 2, 'max_depth': 50, 'criterion': 'entropy'}
+
+Best score:  0.5057634010881492
+
+
+
+Decission Tree Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.71      0.67      0.69      1507
+
+           1       0.79      0.78      0.79      1574
+
+           2       0.58      0.58      0.58      1698
+
+           3       0.59      0.64      0.61      1656
+
+           4       0.50      0.49      0.50      1693
+
+           5       0.41      0.39      0.40      1474
+
+           6       0.31      0.31      0.31      1554
+
+           7       0.43      0.44      0.43      1657
+
+           8       0.71      0.70      0.71      1229
+
+           9       0.90      0.85      0.87      1294
+
+          10       0.65      0.65      0.65      1493
+
+          11       0.45      0.45      0.45      1597
+
+          12       0.39      0.39      0.39      1578
+
+          13       0.45      0.46      0.45      1332
+
+          14       0.36      0.38      0.37      1228
+
+
+
+    accuracy                           0.54     22564
+
+   macro avg       0.55      0.55      0.55     22564
+
+weighted avg       0.54      0.54      0.54     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.63316316 0.63220591 0.63450697]
+
+Mean K-fold cross-validation score: 0.6332920125848168
+
+
+
+Straified cross validation scores: [0.64050202 0.63454584 0.637379  ]
+
+Mean Straified cross-validation score: 0.6374756214635976
+"
+"# 3. Random Forest Classifier on W200_O50_Features
+
+evaluate_model.random_forest_classifier_model()","#-------------------- #3. Random Forest Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 20, 'n_estimators': 100}
+
+Best score:  0.620812360258049
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 50, 'max_depth': 20, 'criterion': 'entropy', 'bootstrap': True}
+
+Best score:  0.6179769890016251
+
+
+
+Random Forest Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.77      0.82      0.79      1507
+
+           1       0.85      0.89      0.87      1574
+
+           2       0.65      0.77      0.70      1698
+
+           3       0.65      0.73      0.69      1656
+
+           4       0.57      0.69      0.62      1693
+
+           5       0.45      0.65      0.53      1474
+
+           6       0.50      0.39      0.43      1554
+
+           7       0.53      0.57      0.55      1657
+
+           8       0.77      0.87      0.82      1229
+
+           9       0.94      0.90      0.92      1294
+
+          10       0.73      0.86      0.79      1493
+
+          11       0.67      0.44      0.53      1597
+
+          12       0.68      0.39      0.49      1578
+
+          13       0.64      0.53      0.58      1332
+
+          14       0.63      0.43      0.51      1228
+
+
+
+    accuracy                           0.66     22564
+
+   macro avg       0.67      0.66      0.66     22564
+
+weighted avg       0.66      0.66      0.65     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.74686237 0.73697086 0.7481119 ]
+
+Mean K-fold cross-validation score: 0.7439817099873428
+
+
+
+Straified cross validation scores: [0.74707509 0.73580089 0.7451335 ]
+
+Mean Straified cross-validation score: 0.742669826756592
+"
+"# 4. Gaussian Naive Bayes on W200_O50_Features
+
+evaluate_model.gaussian_naive_bias_classifier_model()","#-------------------- #4. Gaussian Naive Bias Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'var_smoothing': 0.0001}
+
+Best score:  0.23949112249784144
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'var_smoothing': 0.0001}
+
+Best score:  0.23949112249784144
+
+
+
+Gaussian Naive Bias Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.34      0.47      0.40      1507
+
+           1       0.20      0.13      0.16      1574
+
+           2       0.10      0.06      0.08      1698
+
+           3       0.16      0.85      0.27      1656
+
+           4       0.23      0.15      0.18      1693
+
+           5       0.33      0.21      0.26      1474
+
+           6       0.19      0.07      0.10      1554
+
+           7       0.11      0.08      0.09      1657
+
+           8       0.53      0.63      0.58      1229
+
+           9       0.75      0.72      0.74      1294
+
+          10       0.53      0.60      0.56      1493
+
+          11       0.17      0.01      0.02      1597
+
+          12       0.39      0.03      0.06      1578
+
+          13       0.14      0.07      0.10      1332
+
+          14       0.22      0.05      0.08      1228
+
+
+
+    accuracy                           0.27     22564
+
+   macro avg       0.29      0.28      0.24     22564
+
+weighted avg       0.28      0.27      0.23     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.15592427 0.14433099 0.1767897 ]
+
+Mean K-fold cross-validation score: 0.15901498935344335
+
+
+
+Straified cross validation scores: [0.14932993 0.14379919 0.18210829]
+
+Mean Straified cross-validation score: 0.15841246927201136
+"
+"# 5. Support Vector Classifier on W200_O50_Features
+
+evaluate_model.support_vector_classifier_model()","#-------------------- #5. Support Vector Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 1000, 'gamma': 0.1, 'kernel': 'rbf'}
+
+Best score:  0.5802164986935424
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'kernel': 'rbf', 'gamma': 0.1, 'C': 1000}
+
+Best score:  0.5802164986935424
+
+
+
+Support Vector Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.76      0.79      0.78      1507
+
+           1       0.81      0.89      0.85      1574
+
+           2       0.62      0.71      0.66      1698
+
+           3       0.59      0.69      0.64      1656
+
+           4       0.61      0.65      0.63      1693
+
+           5       0.44      0.49      0.46      1474
+
+           6       0.45      0.38      0.41      1554
+
+           7       0.49      0.47      0.48      1657
+
+           8       0.76      0.81      0.78      1229
+
+           9       0.91      0.87      0.89      1294
+
+          10       0.66      0.83      0.74      1493
+
+          11       0.51      0.39      0.44      1597
+
+          12       0.45      0.38      0.41      1578
+
+          13       0.54      0.49      0.51      1332
+
+          14       0.55      0.39      0.46      1228
+
+
+
+    accuracy                           0.61     22564
+
+   macro avg       0.61      0.62      0.61     22564
+
+weighted avg       0.61      0.61      0.61     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.12550521 0.11976175 0.12998617]
+
+Mean K-fold cross-validation score: 0.12508437871983566
+
+
+
+Straified cross validation scores: [0.12827058 0.12720698 0.12541219]
+
+Mean Straified cross-validation score: 0.12696324938630763
+"
+"# 6. K-Nearest Neighbors on W200_O50_Features
+
+evaluate_model.knn_classifier_model()","#-------------------- #6. K-Nearest Neighbors Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'metric': 'minkowski', 'n_neighbors': 100, 'p': 1, 'weights': 'distance'}
+
+Best score:  0.48626013777189586
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'weights': 'distance', 'p': 1, 'n_neighbors': 100, 'metric': 'minkowski'}
+
+Best score:  0.48626013777189586
+
+
+
+K-Nearest Neighbors Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.67      0.71      0.69      1507
+
+           1       0.67      0.80      0.73      1574
+
+           2       0.43      0.71      0.53      1698
+
+           3       0.51      0.65      0.57      1656
+
+           4       0.55      0.43      0.48      1693
+
+           5       0.38      0.45      0.41      1474
+
+           6       0.42      0.24      0.30      1554
+
+           7       0.31      0.47      0.37      1657
+
+           8       0.50      0.86      0.63      1229
+
+           9       0.89      0.72      0.80      1294
+
+          10       0.58      0.74      0.65      1493
+
+          11       0.67      0.31      0.43      1597
+
+          12       0.68      0.31      0.43      1578
+
+          13       0.54      0.33      0.41      1332
+
+          14       0.50      0.14      0.22      1228
+
+
+
+    accuracy                           0.52     22564
+
+   macro avg       0.55      0.52      0.51     22564
+
+weighted avg       0.55      0.52      0.51     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.36109338 0.35481812 0.3618764 ]
+
+Mean K-fold cross-validation score: 0.35926263477260617
+
+
+
+Straified cross validation scores: [0.36896405 0.35322272 0.35655781]
+
+Mean Straified cross-validation score: 0.3595815272570729
+"
+"# 7. AdaBoost Classifier on W200_O50_Features
+
+evaluate_model.ada_boost_classifier_model()","#-------------------- #7. Ada-Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'estimator': DecisionTreeClassifier(max_depth=1), 'learning_rate': 0.5, 'n_estimators': 100}
+
+Best score:  0.2329390395179869
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 100, 'learning_rate': 0.5, 'estimator': DecisionTreeClassifier(max_depth=1)}
+
+Best score:  0.2329390395179869
+
+
+
+Ada-Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.27      0.18      0.21      1507
+
+           1       0.17      0.33      0.23      1574
+
+           2       0.17      0.39      0.24      1698
+
+           3       0.20      0.09      0.13      1656
+
+           4       0.45      0.13      0.20      1693
+
+           5       0.32      0.63      0.42      1474
+
+           6       0.29      0.05      0.08      1554
+
+           7       0.19      0.35      0.25      1657
+
+           8       0.37      0.24      0.29      1229
+
+           9       0.45      0.32      0.37      1294
+
+          10       0.31      0.64      0.41      1493
+
+          11       0.40      0.23      0.29      1597
+
+          12       0.35      0.18      0.24      1578
+
+          13       0.07      0.04      0.05      1332
+
+          14       0.17      0.01      0.01      1228
+
+
+
+    accuracy                           0.25     22564
+
+   macro avg       0.28      0.25      0.23     22564
+
+weighted avg       0.28      0.25      0.23     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.27004893 0.26855988 0.2774173 ]
+
+Mean K-fold cross-validation score: 0.2720087008897409
+
+
+
+Straified cross validation scores: [0.27313338 0.26483727 0.27624721]
+
+Mean Straified cross-validation score: 0.2714059507625237
+"
+"# 8. Gradient Boost on W200_O50_Features
+
+evaluate_model.gradient_boost_model()","#-------------------- #9. Gradient Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'random_state': 42}
+
+Best score:  0.6075193894902741
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'random_state': 42, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+Best score:  0.6075193894902741
+
+
+
+Gradient Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.74      0.76      0.75      1507
+
+           1       0.82      0.84      0.83      1574
+
+           2       0.66      0.73      0.69      1698
+
+           3       0.65      0.71      0.68      1656
+
+           4       0.63      0.69      0.66      1693
+
+           5       0.46      0.57      0.51      1474
+
+           6       0.40      0.37      0.38      1554
+
+           7       0.48      0.52      0.50      1657
+
+           8       0.79      0.83      0.81      1229
+
+           9       0.94      0.88      0.91      1294
+
+          10       0.74      0.82      0.78      1493
+
+          11       0.57      0.44      0.50      1597
+
+          12       0.54      0.39      0.45      1578
+
+          13       0.52      0.49      0.51      1332
+
+          14       0.49      0.41      0.44      1228
+
+
+
+    accuracy                           0.63     22564
+
+   macro avg       0.63      0.63      0.63     22564
+
+weighted avg       0.63      0.63      0.62     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.68176984 0.6818762  0.69779811]
+
+Mean K-fold cross-validation score: 0.6871480464477978
+
+
+
+Straified cross validation scores: [0.68549245 0.67634546 0.69343687]
+
+Mean Straified cross-validation score: 0.6850915917488626
+"
+"# 9. XGBoost Classifier on W200_O50_Features
+
+evaluate_model.xg_boost_classifier_model()","-------------------- #8. XG Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'gamma': 0.1, 'learning_rate': 0.2, 'n_estimators': 50, 'subsample': 0.8}
+
+Best score:  0.6255994057785771
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'subsample': 0.8, 'n_estimators': 50, 'learning_rate': 0.2, 'gamma': 0.1}
+
+Best score:  0.6255994057785771
+
+
+
+XG Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.77      0.79      0.78      1507
+
+           1       0.84      0.89      0.87      1574
+
+           2       0.69      0.75      0.72      1698
+
+           3       0.66      0.75      0.70      1656
+
+           4       0.66      0.73      0.69      1693
+
+           5       0.49      0.63      0.55      1474
+
+           6       0.46      0.39      0.42      1554
+
+           7       0.50      0.54      0.52      1657
+
+           8       0.80      0.86      0.83      1229
+
+           9       0.94      0.90      0.92      1294
+
+          10       0.76      0.85      0.80      1493
+
+          11       0.64      0.47      0.54      1597
+
+          12       0.62      0.40      0.49      1578
+
+          13       0.58      0.53      0.55      1332
+
+          14       0.50      0.45      0.47      1228
+
+
+
+    accuracy                           0.66     22564
+
+   macro avg       0.66      0.66      0.66     22564
+
+weighted avg       0.66      0.66      0.66     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.71240162 0.7127207  0.72322093]
+
+Mean K-fold cross-validation score: 0.7161144161147962
+
+
+
+Straified cross validation scores: [0.71878324 0.71537971 0.72141262]
+
+Mean Straified cross-validation score: 0.7185251865778799
+"
+"# 10. Artificial Neural Network on W200_O50_Features
+
+evaluate_model.ann_model()","#----------------------- #10. Artificial Neural Net Model ------------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'batch_size': 50, 'epochs': 150, 'model__activation': 'tanh', 'model__n_neurons': 16}
+
+Best score:  0.4997320159414224
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'model__n_neurons': 16, 'model__activation': 'tanh', 'epochs': 150, 'batch_size': 50}
+
+Best score:  0.48271865727072893
+
+
+
+Artificial Neural Net Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.55      0.75      0.64      1507
+
+           1       0.77      0.66      0.71      1574
+
+           2       0.49      0.61      0.55      1698
+
+           3       0.46      0.63      0.53      1656
+
+           4       0.52      0.62      0.56      1693
+
+           5       0.40      0.49      0.44      1474
+
+           6       0.34      0.16      0.22      1554
+
+           7       0.40      0.42      0.41      1657
+
+           8       0.77      0.75      0.76      1229
+
+           9       0.86      0.88      0.87      1294
+
+          10       0.76      0.76      0.76      1493
+
+          11       0.37      0.19      0.25      1597
+
+          12       0.39      0.32      0.35      1578
+
+          13       0.36      0.37      0.37      1332
+
+          14       0.30      0.24      0.26      1228
+
+
+
+    accuracy                           0.52     22564
+
+   macro avg       0.52      0.52      0.51     22564
+
+weighted avg       0.51      0.52      0.51     22564
+
+
+
+
+
+K-fold cross-validation scores: [0.2547684889739772, 0.24968089632676216]
+
+Average score: 0.2522246926503697
+
+
+
+Stratified cross-validation scores: [0.2650499893639651, 0.23053467593249186]
+
+Average score: 0.24779233264822847
 "
 "# 1. Logistic Regression on W300_O25_Features
 
@@ -1112,6 +3128,1552 @@ Best score:  0.38751462123310865
 
 
 #---------- Random Search -----------#
+
+Best parameters:  {'solver': 'lbfgs', 'penalty': 'l2', 'max_iter': 500, 'C': 10}
+
+Best score:  0.38751462123310865
+
+
+
+Logistic Regression Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.30      0.43      0.36       669
+
+           1       0.41      0.59      0.48       698
+
+           2       0.31      0.36      0.34       753
+
+           3       0.25      0.52      0.34       734
+
+           4       0.37      0.36      0.36       750
+
+           5       0.46      0.44      0.45       654
+
+           6       0.43      0.27      0.33       689
+
+           7       0.21      0.17      0.19       734
+
+           8       0.62      0.77      0.69       545
+
+           9       0.84      0.86      0.85       571
+
+          10       0.74      0.76      0.75       663
+
+          11       0.39      0.24      0.29       706
+
+          12       0.24      0.11      0.15       694
+
+          13       0.34      0.21      0.26       590
+
+          14       0.34      0.13      0.18       545
+
+
+
+    accuracy                           0.41      9995
+
+   macro avg       0.42      0.41      0.40      9995
+
+weighted avg       0.41      0.41      0.39      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.19351741 0.20341018 0.19980788]
+
+Mean K-fold cross-validation score: 0.1989118221736341
+
+
+
+Straified cross validation scores: [0.2002401  0.19860711 0.20244957]
+
+Mean Straified cross-validation score: 0.20043225743707663
+"
+"# 2. Decision Tree Classifier on W300_O25_Features
+
+evaluate_model.decission_tree_classifier_model()","#-------------------- #2. Decission Tree Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'criterion': 'gini', 'max_depth': None, 'min_samples_split': 5}
+
+Best score:  0.4555591467356173
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'min_samples_split': 5, 'max_depth': 20, 'criterion': 'gini'}
+
+Best score:  0.45676058885092496
+
+
+
+Decission Tree Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.62      0.63      0.62       669
+
+           1       0.71      0.68      0.70       698
+
+           2       0.43      0.55      0.49       753
+
+           3       0.49      0.55      0.52       734
+
+           4       0.38      0.37      0.38       750
+
+           5       0.37      0.39      0.38       654
+
+           6       0.25      0.26      0.25       689
+
+           7       0.39      0.36      0.37       734
+
+           8       0.63      0.69      0.66       545
+
+           9       0.79      0.88      0.83       571
+
+          10       0.66      0.64      0.65       663
+
+          11       0.34      0.32      0.33       706
+
+          12       0.33      0.29      0.31       694
+
+          13       0.45      0.39      0.42       590
+
+          14       0.32      0.23      0.27       545
+
+
+
+    accuracy                           0.48      9995
+
+   macro avg       0.48      0.48      0.48      9995
+
+weighted avg       0.47      0.48      0.47      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.57911164 0.57300672 0.59414025]
+
+Mean K-fold cross-validation score: 0.5820862062404212
+
+
+
+Straified cross validation scores: [0.57022809 0.57660903 0.55619597]
+
+Mean Straified cross-validation score: 0.5676776954778069
+"
+"# 3. Random Forest Classifier on W300_O25_Features
+
+evaluate_model.random_forest_classifier_model()","#-------------------- #3. Random Forest Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'bootstrap': True, 'criterion': 'gini', 'max_depth': 20, 'n_estimators': 100}
+
+Best score:  0.572048530950842
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 100, 'max_depth': 20, 'criterion': 'entropy', 'bootstrap': True}
+
+Best score:  0.5724506148613292
+
+
+
+Random Forest Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.74      0.75      0.75       669
+
+           1       0.83      0.84      0.83       698
+
+           2       0.55      0.70      0.62       753
+
+           3       0.60      0.68      0.64       734
+
+           4       0.49      0.58      0.53       750
+
+           5       0.45      0.66      0.53       654
+
+           6       0.45      0.38      0.41       689
+
+           7       0.47      0.50      0.49       734
+
+           8       0.72      0.91      0.80       545
+
+           9       0.89      0.94      0.91       571
+
+          10       0.74      0.81      0.77       663
+
+          11       0.51      0.33      0.40       706
+
+          12       0.49      0.27      0.35       694
+
+          13       0.58      0.45      0.50       590
+
+          14       0.62      0.34      0.44       545
+
+
+
+    accuracy                           0.60      9995
+
+   macro avg       0.61      0.61      0.60      9995
+
+weighted avg       0.60      0.60      0.59      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.69411765 0.68756004 0.70965418]
+
+Mean K-fold cross-validation score: 0.6971106213859223
+
+
+
+Straified cross validation scores: [0.70060024 0.69788665 0.68587896]
+
+Mean Straified cross-validation score: 0.6947886166954774
+"
+"# 4. Gaussian Naive Bayes on W300_O25_Features
+
+evaluate_model.gaussian_naive_bias_classifier_model()","#-------------------- #4. Gaussian Naive Bias Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'var_smoothing': 0.0001}
+
+Best score:  0.26380744605534523
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'var_smoothing': 0.0001}
+
+Best score:  0.26380744605534523
+
+
+
+Gaussian Naive Bias Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.16      0.85      0.26       669
+
+           1       0.24      0.06      0.10       698
+
+           2       0.19      0.14      0.16       753
+
+           3       0.15      0.21      0.17       734
+
+           4       0.27      0.17      0.21       750
+
+           5       0.36      0.24      0.29       654
+
+           6       0.27      0.18      0.21       689
+
+           7       0.14      0.10      0.12       734
+
+           8       0.49      0.59      0.53       545
+
+           9       0.70      0.75      0.73       571
+
+          10       0.48      0.61      0.54       663
+
+          11       0.31      0.03      0.06       706
+
+          12       0.30      0.02      0.05       694
+
+          13       0.18      0.07      0.10       590
+
+          14       0.11      0.04      0.06       545
+
+
+
+    accuracy                           0.26      9995
+
+   macro avg       0.29      0.27      0.24      9995
+
+weighted avg       0.28      0.26      0.23      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.15054022 0.14601345 0.16666667]
+
+Mean K-fold cross-validation score: 0.15440677712006992
+
+
+
+Straified cross validation scores: [0.19183673 0.14961575 0.18996158]
+
+Mean Straified cross-validation score: 0.17713802139491722
+"
+"# 5. Support Vector Classifier on W300_O25_Features
+
+evaluate_model.support_vector_classifier_model()","#-------------------- #5. Support Vector Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 1000, 'gamma': 0.1, 'kernel': 'rbf'}
+
+Best score:  0.5520376419798689
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'kernel': 'rbf', 'gamma': 0.1, 'C': 1000}
+
+Best score:  0.5520376419798689
+
+
+
+Support Vector Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.74      0.73      0.74       669
+
+           1       0.81      0.85      0.83       698
+
+           2       0.59      0.63      0.61       753
+
+           3       0.56      0.67      0.61       734
+
+           4       0.57      0.58      0.58       750
+
+           5       0.37      0.52      0.43       654
+
+           6       0.44      0.32      0.37       689
+
+           7       0.44      0.41      0.42       734
+
+           8       0.73      0.80      0.76       545
+
+           9       0.70      0.92      0.79       571
+
+          10       0.74      0.81      0.77       663
+
+          11       0.47      0.36      0.40       706
+
+          12       0.40      0.32      0.35       694
+
+          13       0.53      0.44      0.48       590
+
+          14       0.43      0.30      0.35       545
+
+
+
+    accuracy                           0.57      9995
+
+   macro avg       0.57      0.58      0.57      9995
+
+weighted avg       0.57      0.57      0.57      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.10180072 0.10158501 0.0943804 ]
+
+Mean K-fold cross-validation score: 0.09925537938518347
+
+
+
+Straified cross validation scores: [0.10492197 0.10614793 0.10518732]
+
+Mean Straified cross-validation score: 0.10541907445014509
+"
+"# 6. K-Nearest Neighbors on W300_O25_Features
+
+evaluate_model.knn_classifier_model()","#-------------------- #6. K-Nearest Neighbors Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'metric': 'minkowski', 'n_neighbors': 100, 'p': 1, 'weights': 'distance'}
+
+Best score:  0.43275002308615756
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'weights': 'distance', 'p': 1, 'n_neighbors': 100, 'metric': 'minkowski'}
+
+Best score:  0.43275002308615756
+
+
+
+K-Nearest Neighbors Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.52      0.78      0.62       669
+
+           1       0.55      0.67      0.60       698
+
+           2       0.38      0.66      0.48       753
+
+           3       0.44      0.68      0.53       734
+
+           4       0.56      0.31      0.40       750
+
+           5       0.42      0.37      0.39       654
+
+           6       0.31      0.25      0.28       689
+
+           7       0.30      0.40      0.34       734
+
+           8       0.46      0.83      0.60       545
+
+           9       0.88      0.73      0.79       571
+
+          10       0.53      0.70      0.60       663
+
+          11       0.56      0.25      0.35       706
+
+          12       0.67      0.18      0.28       694
+
+          13       0.54      0.23      0.32       590
+
+          14       0.48      0.08      0.14       545
+
+
+
+    accuracy                           0.47      9995
+
+   macro avg       0.51      0.47      0.45      9995
+
+weighted avg       0.50      0.47      0.45      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.33853541 0.3439001  0.33429395]
+
+Mean K-fold cross-validation score: 0.3389098194513156
+
+
+
+Straified cross validation scores: [0.34957983 0.34173871 0.32348703]
+
+Mean Straified cross-validation score: 0.338268525469746
+"
+"# 7. AdaBoost Classifier on W300_O25_Features
+
+evaluate_model.ada_boost_classifier_model()","#-------------------- #7. Ada-Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'estimator': DecisionTreeClassifier(max_depth=1), 'learning_rate': 0.5, 'n_estimators': 100}
+
+Best score:  0.23858341413488474
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 100, 'learning_rate': 0.5, 'estimator': DecisionTreeClassifier(max_depth=1)}
+
+Best score:  0.23858341413488474
+
+
+
+Ada-Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.30      0.58      0.40       669
+
+           1       0.25      0.18      0.21       698
+
+           2       0.18      0.37      0.24       753
+
+           3       0.24      0.23      0.23       734
+
+           4       0.35      0.18      0.24       750
+
+           5       0.36      0.45      0.40       654
+
+           6       0.20      0.10      0.14       689
+
+           7       0.17      0.15      0.16       734
+
+           8       0.17      0.24      0.20       545
+
+           9       0.21      0.14      0.17       571
+
+          10       0.25      0.57      0.35       663
+
+          11       0.47      0.26      0.33       706
+
+          12       0.25      0.11      0.15       694
+
+          13       0.28      0.05      0.09       590
+
+          14       0.14      0.10      0.11       545
+
+
+
+    accuracy                           0.25      9995
+
+   macro avg       0.25      0.25      0.23      9995
+
+weighted avg       0.26      0.25      0.23      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.27058824 0.2795389  0.26368876]
+
+Mean K-fold cross-validation score: 0.2712719670000565
+
+
+
+Straified cross validation scores: [0.2545018  0.26056676 0.25936599]
+
+Mean Straified cross-validation score: 0.25814485256158176
+"
+"# 8. Gradient Boost on W300_O25_Features
+
+evaluate_model.gradient_boost_model()","#-------------------- #9. Gradient Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'random_state': 42}
+
+Best score:  0.5628458114014837
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'random_state': 42, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+Best score:  0.5628458114014837
+
+
+
+Gradient Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.71      0.69      0.70       669
+
+           1       0.79      0.82      0.80       698
+
+           2       0.61      0.67      0.64       753
+
+           3       0.59      0.62      0.60       734
+
+           4       0.62      0.60      0.61       750
+
+           5       0.46      0.58      0.51       654
+
+           6       0.41      0.38      0.40       689
+
+           7       0.43      0.51      0.47       734
+
+           8       0.74      0.84      0.79       545
+
+           9       0.89      0.89      0.89       571
+
+          10       0.72      0.76      0.74       663
+
+          11       0.46      0.37      0.41       706
+
+          12       0.41      0.33      0.36       694
+
+          13       0.53      0.45      0.49       590
+
+          14       0.44      0.33      0.38       545
+
+
+
+    accuracy                           0.59      9995
+
+   macro avg       0.59      0.59      0.59      9995
+
+weighted avg       0.58      0.59      0.58      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.6665066  0.65225744 0.66282421]
+
+Mean K-fold cross-validation score: 0.6605294182995004
+
+
+
+Straified cross validation scores: [0.67202881 0.67507205 0.65850144]
+
+Mean Straified cross-validation score: 0.66853409951877
+"
+"# 9. XGBoost Classifier on W300_O25_Features
+
+evaluate_model.xg_boost_classifier_model()","-------------------- #8. XG Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'gamma': 0, 'learning_rate': 0.2, 'n_estimators': 50, 'subsample': 0.8}
+
+Best score:  0.5968709599224306
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'subsample': 0.8, 'n_estimators': 50, 'learning_rate': 0.2, 'gamma': 0}
+
+Best score:  0.5968709599224306
+
+
+
+XG Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.72      0.71      0.72       669
+
+           1       0.81      0.85      0.83       698
+
+           2       0.58      0.67      0.62       753
+
+           3       0.63      0.68      0.66       734
+
+           4       0.62      0.61      0.62       750
+
+           5       0.51      0.66      0.57       654
+
+           6       0.47      0.42      0.44       689
+
+           7       0.45      0.54      0.49       734
+
+           8       0.77      0.89      0.82       545
+
+           9       0.89      0.93      0.91       571
+
+          10       0.78      0.83      0.80       663
+
+          11       0.49      0.40      0.44       706
+
+          12       0.46      0.30      0.36       694
+
+          13       0.59      0.50      0.54       590
+
+          14       0.48      0.37      0.42       545
+
+
+
+    accuracy                           0.62      9995
+
+   macro avg       0.62      0.62      0.62      9995
+
+weighted avg       0.61      0.62      0.61      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.69483794 0.6882805  0.70389049]
+
+Mean K-fold cross-validation score: 0.695669641535769
+
+
+
+Straified cross validation scores: [0.71068427 0.70677233 0.68780019]
+
+Mean Straified cross-validation score: 0.7017522667087969
+"
+"# 10. Artificial Neural Network on W300_O25_Features
+
+evaluate_model.ann_model()","#----------------------- #10. Artificial Neural Net Model ------------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'batch_size': 50, 'epochs': 150, 'model__activation': 'relu', 'model__n_neurons': 16}
+
+Best score:  0.4399485755840798
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'model__n_neurons': 16, 'model__activation': 'tanh', 'epochs': 150, 'batch_size': 50}
+
+Best score:  0.43314489257241356
+
+
+
+Artificial Neural Net Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.54      0.55      0.55       669
+
+           1       0.60      0.70      0.65       698
+
+           2       0.38      0.59      0.46       753
+
+           3       0.39      0.56      0.46       734
+
+           4       0.46      0.41      0.43       750
+
+           5       0.38      0.40      0.39       654
+
+           6       0.35      0.17      0.23       689
+
+           7       0.29      0.31      0.30       734
+
+           8       0.65      0.74      0.69       545
+
+           9       0.82      0.87      0.84       571
+
+          10       0.67      0.77      0.72       663
+
+          11       0.35      0.24      0.29       706
+
+          12       0.27      0.14      0.18       694
+
+          13       0.36      0.32      0.34       590
+
+          14       0.22      0.18      0.20       545
+
+
+
+    accuracy                           0.46      9995
+
+   macro avg       0.45      0.46      0.45      9995
+
+weighted avg       0.44      0.46      0.44      9995
+
+
+
+
+
+K-fold cross-validation scores: [0.08708179926364655, 0.14024975984630164]
+
+Average score: 0.11366577955497409
+
+
+
+Stratified cross-validation scores: [0.16295821994557388, 0.09654178674351585]
+
+Average score: 0.12975000334454487
+"
+"# 1. Logistic Regression on W300_O50_Features
+
+evaluate_model.logistic_regression_model()","#------------------- #1. Logistic Regression Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 10, 'max_iter': 500, 'penalty': 'l2', 'solver': 'lbfgs'}
+
+Best score:  0.4024584215793117
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'solver': 'lbfgs', 'penalty': 'l2', 'max_iter': 500, 'C': 10}
+
+Best score:  0.4024584215793117
+
+
+
+Logistic Regression Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.32      0.45      0.37       999
+
+           1       0.43      0.61      0.51      1045
+
+           2       0.31      0.33      0.32      1127
+
+           3       0.27      0.58      0.37      1099
+
+           4       0.39      0.34      0.37      1123
+
+           5       0.45      0.49      0.47       980
+
+           6       0.41      0.33      0.37      1032
+
+           7       0.21      0.17      0.19      1099
+
+           8       0.69      0.75      0.72       816
+
+           9       0.88      0.82      0.85       851
+
+          10       0.76      0.79      0.77       991
+
+          11       0.33      0.23      0.27      1059
+
+          12       0.34      0.09      0.14      1047
+
+          13       0.34      0.27      0.30       884
+
+          14       0.36      0.10      0.16       816
+
+
+
+    accuracy                           0.42     14968
+
+   macro avg       0.43      0.42      0.41     14968
+
+weighted avg       0.42      0.42      0.40     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.1976912  0.20410454 0.20734445]
+
+Mean K-fold cross-validation score: 0.20304672890019623
+
+
+
+Straified cross validation scores: [0.20683021 0.20602854 0.19499679]
+
+Mean Straified cross-validation score: 0.2026185130026624
+"
+"# 2. Decision Tree Classifier on W300_O50_Features
+
+evaluate_model.decission_tree_classifier_model()","#-------------------- #2. Decission Tree Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'criterion': 'entropy', 'max_depth': None, 'min_samples_split': 2}
+
+Best score:  0.5042730758949684
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'min_samples_split': 2, 'max_depth': None, 'criterion': 'entropy'}
+
+Best score:  0.5013341849498626
+
+
+
+Decission Tree Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.70      0.68      0.69       999
+
+           1       0.76      0.78      0.77      1045
+
+           2       0.57      0.58      0.57      1127
+
+           3       0.59      0.59      0.59      1099
+
+           4       0.51      0.48      0.49      1123
+
+           5       0.44      0.41      0.42       980
+
+           6       0.32      0.33      0.33      1032
+
+           7       0.43      0.45      0.44      1099
+
+           8       0.66      0.66      0.66       816
+
+           9       0.87      0.84      0.86       851
+
+          10       0.64      0.70      0.67       991
+
+          11       0.36      0.38      0.37      1059
+
+          12       0.36      0.35      0.35      1047
+
+          13       0.47      0.43      0.45       884
+
+          14       0.36      0.36      0.36       816
+
+
+
+    accuracy                           0.53     14968
+
+   macro avg       0.54      0.53      0.53     14968
+
+weighted avg       0.53      0.53      0.53     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.62914863 0.62610229 0.62844772]
+
+Mean K-fold cross-validation score: 0.6278995482722943
+
+
+
+Straified cross validation scores: [0.62514029 0.63556197 0.62732521]
+
+Mean Straified cross-validation score: 0.6293424897230756
+"
+"# 3. Random Forest Classifier on W300_O50_Features
+
+evaluate_model.random_forest_classifier_model()","#-------------------- #3. Random Forest Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'bootstrap': True, 'criterion': 'entropy', 'max_depth': 20, 'n_estimators': 100}
+
+Best score:  0.611169156402717
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 100, 'max_depth': 20, 'criterion': 'entropy', 'bootstrap': True}
+
+Best score:  0.6202533516336645
+
+
+
+Random Forest Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.77      0.81      0.79       999
+
+           1       0.81      0.87      0.84      1045
+
+           2       0.62      0.76      0.68      1127
+
+           3       0.65      0.72      0.68      1099
+
+           4       0.56      0.68      0.61      1123
+
+           5       0.48      0.64      0.55       980
+
+           6       0.48      0.44      0.46      1032
+
+           7       0.55      0.56      0.55      1099
+
+           8       0.77      0.88      0.82       816
+
+           9       0.92      0.92      0.92       851
+
+          10       0.75      0.87      0.80       991
+
+          11       0.64      0.44      0.52      1059
+
+          12       0.62      0.38      0.47      1047
+
+          13       0.61      0.47      0.53       884
+
+          14       0.61      0.39      0.48       816
+
+
+
+    accuracy                           0.65     14968
+
+   macro avg       0.66      0.65      0.65     14968
+
+weighted avg       0.65      0.65      0.64     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.75533109 0.74250441 0.74246312]
+
+Mean K-fold cross-validation score: 0.746766205072812
+
+
+
+Straified cross validation scores: [0.74779541 0.74378708 0.74855677]
+
+Mean Straified cross-validation score: 0.7467130862469755
+"
+"# 4. Gaussian Naive Bayes on W300_O50_Features
+
+evaluate_model.gaussian_naive_bias_classifier_model()","#-------------------- #4. Gaussian Naive Bias Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'var_smoothing': 1e-09}
+
+Best score:  0.25708281071151956
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'var_smoothing': 1e-09}
+
+Best score:  0.25708281071151956
+
+
+
+Gaussian Naive Bias Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.13      0.86      0.23       999
+
+           1       0.20      0.06      0.10      1045
+
+           2       0.14      0.10      0.11      1127
+
+           3       0.12      0.07      0.09      1099
+
+           4       0.26      0.17      0.21      1123
+
+           5       0.38      0.27      0.32       980
+
+           6       0.27      0.19      0.22      1032
+
+           7       0.11      0.07      0.09      1099
+
+           8       0.55      0.56      0.56       816
+
+           9       0.75      0.74      0.75       851
+
+          10       0.52      0.65      0.57       991
+
+          11       0.35      0.02      0.03      1059
+
+          12       0.39      0.06      0.11      1047
+
+          13       0.18      0.10      0.13       884
+
+          14       0.19      0.06      0.09       816
+
+
+
+    accuracy                           0.25     14968
+
+   macro avg       0.30      0.26      0.24     14968
+
+weighted avg       0.29      0.25      0.23     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.23424723 0.2656726  0.24101988]
+
+Mean K-fold cross-validation score: 0.2469799059315131
+
+
+
+Straified cross validation scores: [0.24370691 0.25188392 0.24599102]
+
+Mean Straified cross-validation score: 0.2471939496029012
+"
+"# 5. Support Vector Classifier on W300_O50_Features
+
+evaluate_model.support_vector_classifier_model()","#-------------------- #5. Support Vector Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'C': 1000, 'gamma': 0.1, 'kernel': 'rbf'}
+
+Best score:  0.5702810677249329
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'kernel': 'rbf', 'gamma': 0.1, 'C': 1000}
+
+Best score:  0.5702810677249329
+
+
+
+Support Vector Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.79      0.79      0.79       999
+
+           1       0.82      0.83      0.83      1045
+
+           2       0.59      0.70      0.64      1127
+
+           3       0.60      0.69      0.64      1099
+
+           4       0.60      0.63      0.61      1123
+
+           5       0.47      0.54      0.50       980
+
+           6       0.43      0.38      0.40      1032
+
+           7       0.54      0.48      0.51      1099
+
+           8       0.76      0.78      0.77       816
+
+           9       0.90      0.90      0.90       851
+
+          10       0.72      0.87      0.79       991
+
+          11       0.48      0.47      0.47      1059
+
+          12       0.44      0.38      0.41      1047
+
+          13       0.61      0.45      0.52       884
+
+          14       0.48      0.35      0.41       816
+
+
+
+    accuracy                           0.62     14968
+
+   macro avg       0.61      0.62      0.61     14968
+
+weighted avg       0.61      0.62      0.61     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.11495911 0.11223345 0.1080821 ]
+
+Mean K-fold cross-validation score: 0.11175822147955283
+
+
+
+Straified cross validation scores: [0.11223345 0.11127144 0.11225144]
+
+Mean Straified cross-validation score: 0.11191877780146614
+"
+"# 6. K-Nearest Neighbors on W300_O50_Features
+
+evaluate_model.knn_classifier_model()","#-------------------- #6. K-Nearest Neighbors Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'metric': 'minkowski', 'n_neighbors': 100, 'p': 1, 'weights': 'distance'}
+
+Best score:  0.4599153352661773
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'weights': 'distance', 'p': 1, 'n_neighbors': 100, 'metric': 'minkowski'}
+
+Best score:  0.4599153352661773
+
+
+
+K-Nearest Neighbors Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.61      0.71      0.65       999
+
+           1       0.59      0.74      0.65      1045
+
+           2       0.43      0.70      0.54      1127
+
+           3       0.45      0.71      0.55      1099
+
+           4       0.56      0.45      0.50      1123
+
+           5       0.40      0.46      0.43       980
+
+           6       0.36      0.28      0.32      1032
+
+           7       0.38      0.43      0.40      1099
+
+           8       0.48      0.83      0.61       816
+
+           9       0.89      0.75      0.81       851
+
+          10       0.60      0.72      0.65       991
+
+          11       0.60      0.33      0.43      1059
+
+          12       0.69      0.21      0.32      1047
+
+          13       0.53      0.28      0.37       884
+
+          14       0.60      0.11      0.18       816
+
+
+
+    accuracy                           0.51     14968
+
+   macro avg       0.54      0.51      0.49     14968
+
+weighted avg       0.54      0.51      0.49     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.37165304 0.36748437 0.36064785]
+
+Mean K-fold cross-validation score: 0.3665950856635769
+
+
+
+Straified cross validation scores: [0.36556037 0.3676447  0.37395767]
+
+Mean Straified cross-validation score: 0.36905424390279357
+"
+"# 7. AdaBoost Classifier on W300_O50_Features
+
+evaluate_model.ada_boost_classifier_model()","#-------------------- #7. Ada-Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'estimator': DecisionTreeClassifier(max_depth=1), 'learning_rate': 0.5, 'n_estimators': 50}
+
+Best score:  0.2124584044441703
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'n_estimators': 50, 'learning_rate': 0.5, 'estimator': DecisionTreeClassifier(max_depth=1)}
+
+Best score:  0.2124584044441703
+
+
+
+Ada-Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.24      0.42      0.31       999
+
+           1       0.02      0.00      0.01      1045
+
+           2       0.11      0.12      0.12      1127
+
+           3       0.09      0.04      0.06      1099
+
+           4       0.16      0.15      0.15      1123
+
+           5       0.34      0.59      0.43       980
+
+           6       0.12      0.22      0.16      1032
+
+           7       0.11      0.00      0.01      1099
+
+           8       0.30      0.22      0.26       816
+
+           9       0.72      0.49      0.58       851
+
+          10       0.34      0.39      0.36       991
+
+          11       0.23      0.01      0.02      1059
+
+          12       0.09      0.05      0.07      1047
+
+          13       0.35      0.02      0.05       884
+
+          14       0.06      0.28      0.10       816
+
+
+
+    accuracy                           0.19     14968
+
+   macro avg       0.22      0.20      0.18     14968
+
+weighted avg       0.21      0.19      0.17     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.24867725 0.26086259 0.26170622]
+
+Mean K-fold cross-validation score: 0.25708202160343846
+
+
+
+Straified cross validation scores: [0.27577361 0.24466891 0.28191148]
+
+Mean Straified cross-validation score: 0.26745133405385707
+"
+"# 8. Gradient Boost on W300_O50_Features
+
+evaluate_model.gradient_boost_model()","#-------------------- #9. Gradient Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'random_state': 42}
+
+Best score:  0.5905928501908856
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'random_state': 42, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+Best score:  0.5905928501908856
+
+
+
+Gradient Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.78      0.75      0.76       999
+
+           1       0.81      0.88      0.84      1045
+
+           2       0.62      0.71      0.66      1127
+
+           3       0.65      0.66      0.66      1099
+
+           4       0.65      0.67      0.66      1123
+
+           5       0.50      0.58      0.53       980
+
+           6       0.40      0.38      0.39      1032
+
+           7       0.46      0.50      0.48      1099
+
+           8       0.79      0.84      0.82       816
+
+           9       0.92      0.91      0.91       851
+
+          10       0.75      0.82      0.78       991
+
+          11       0.53      0.45      0.49      1059
+
+          12       0.50      0.40      0.45      1047
+
+          13       0.53      0.46      0.49       884
+
+          14       0.47      0.39      0.43       816
+
+
+
+    accuracy                           0.62     14968
+
+   macro avg       0.62      0.63      0.62     14968
+
+weighted avg       0.62      0.62      0.62     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.7032227  0.68959436 0.69611931]
+
+Mean K-fold cross-validation score: 0.6963121222439873
+
+
+
+Straified cross validation scores: [0.70161937 0.69905403 0.69483643]
+
+Mean Straified cross-validation score: 0.6985032780948967
+"
+"# 9. XGBoost Classifier on W300_O50_Features
+
+evaluate_model.xg_boost_classifier_model()","-------------------- #8. XG Boost Classifier Model --------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'gamma': 0, 'learning_rate': 0.2, 'n_estimators': 50, 'subsample': 0.8}
+
+Best score:  0.6229268620758196
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'subsample': 0.8, 'n_estimators': 50, 'learning_rate': 0.2, 'gamma': 0}
+
+Best score:  0.6229268620758196
+
+
+
+XG Boost Classifier Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.78      0.79      0.78       999
+
+           1       0.83      0.89      0.86      1045
+
+           2       0.65      0.73      0.69      1127
+
+           3       0.70      0.72      0.71      1099
+
+           4       0.68      0.68      0.68      1123
+
+           5       0.51      0.65      0.57       980
+
+           6       0.48      0.41      0.44      1032
+
+           7       0.49      0.57      0.53      1099
+
+           8       0.81      0.86      0.83       816
+
+           9       0.94      0.92      0.93       851
+
+          10       0.79      0.88      0.83       991
+
+          11       0.57      0.47      0.52      1059
+
+          12       0.57      0.41      0.47      1047
+
+          13       0.58      0.50      0.54       884
+
+          14       0.51      0.46      0.48       816
+
+
+
+    accuracy                           0.66     14968
+
+   macro avg       0.66      0.66      0.66     14968
+
+weighted avg       0.66      0.66      0.66     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.72935706 0.72534873 0.72706863]
+
+Mean K-fold cross-validation score: 0.7272581405928994
+
+
+
+Straified cross validation scores: [0.7381754  0.72679173 0.72626684]
+
+Mean Straified cross-validation score: 0.730411323116761
+"
+"# 10. Artificial Neural Network on W300_O50_Features
+
+evaluate_model.ann_model()","#----------------------- #10. Artificial Neural Net Model ------------------------#
+
+#---------- Grid Search ------------#
+
+Best parameters:  {'batch_size': 50, 'epochs': 150, 'model__activation': 'tanh', 'model__n_neurons': 16}
+
+Best score:  0.4935846030473136
+
+
+
+#---------- Random Search -----------#
+
+Best parameters:  {'model__n_neurons': 16, 'model__activation': 'relu', 'epochs': 150, 'batch_size': 100}
+
+Best score:  0.4791503882823049
+
+
+
+Artificial Neural Net Metrics: 
+
+              precision    recall  f1-score   support
+
+
+
+           0       0.58      0.62      0.60       999
+
+           1       0.71      0.72      0.71      1045
+
+           2       0.43      0.46      0.44      1127
+
+           3       0.38      0.73      0.50      1099
+
+           4       0.57      0.58      0.58      1123
+
+           5       0.48      0.51      0.49       980
+
+           6       0.49      0.28      0.36      1032
+
+           7       0.31      0.34      0.32      1099
+
+           8       0.72      0.79      0.75       816
+
+           9       0.87      0.89      0.88       851
+
+          10       0.72      0.81      0.76       991
+
+          11       0.40      0.26      0.32      1059
+
+          12       0.28      0.21      0.24      1047
+
+          13       0.47      0.38      0.42       884
+
+          14       0.40      0.23      0.29       816
+
+
+
+    accuracy                           0.52     14968
+
+   macro avg       0.52      0.52      0.51     14968
+
+weighted avg       0.51      0.52      0.50     14968
+
+
+
+
+
+K-fold cross-validation scores: [0.23559593800106896, 0.22308925708177446]
+
+Average score: 0.22934259754142172
+
+
+
+Stratified cross-validation scores: [0.24061998931052914, 0.2472474612506681]
+
+Average score: 0.24393372528059862
 "
 "# 1. Logistic Regression on W400_O25_Features
 
