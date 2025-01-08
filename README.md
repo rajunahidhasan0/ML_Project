@@ -1,7 +1,22 @@
 # **Project Title**: [ML Project: Human Activity Recognition]
 
 ## **Project Overview**
-This repository contains the code and resources for a machine learning project aimed at predicting outcomes and analyzing data. The project demonstrates end-to-end data preprocessing, analysis, and modeling, focusing on a given dataset of human activity recognition (HAR) or analysis, collected from multiple users (15 in total) performing various activities.
+This repository showcases a comprehensive machine learning project focused on solving [specific problem, e.g., activity recognition, classification of tasks, etc.]. The project involved data preprocessing, feature engineering, and the application of 10 different classification models to evaluate their performance.
+
+The primary objective was to determine which model provides the best accuracy for the given dataset and to compare the performance of these models. The classification models used include:
+
+1. **Logistic Regression**
+2. **Decision Tree**
+3. **Random Forest**
+4. **Gaussian Naive Bayes**
+5. **Support Vector Machine (SVM)**
+6. **K-Nearest Neighbors (KNN)**
+7. **AdaBoost**
+8. **Gradient Boosting**
+9. **XGBoost**
+10. **Artificial Neural Network (ANN)**
+
+Each model's performance was evaluated using metrics like accuracy, precision, recall, and F1-score to ensure a robust comparison. This project demonstrates the process of exploring and comparing machine learning techniques to achieve the best results.
 
 ---
 
