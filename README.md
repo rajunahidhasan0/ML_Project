@@ -1,4 +1,4 @@
-# **Project Title**: [ML Project: Human Activity Recognition]
+# **Project Title**: ML Project: Human Activity Recognition
 
 ## **Project Overview**
 This repository showcases a comprehensive machine learning project focused on solving activity recognition. The project involved data preprocessing, feature engineering, and the application of 10 different classification models to evaluate their performance.
